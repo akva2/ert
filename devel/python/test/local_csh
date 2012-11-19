@@ -1,14 +1,14 @@
 mkdir -p lib 
-ln -sf ../../../libutil/slib/libert_util.so lib/libert_util.so
-ln -sf ../../../libgeometry/slib/libgeometry.so lib/libgeometry.so
-ln -sf ../../../libanalysis/lib/libanalysis.so lib/libanalysis.so
-ln -sf ../../../libecl/slib/libecl.so lib/libecl.so
-ln -sf ../../../librms/slib/librms.so lib/librms.so
-ln -sf ../../../libsched/slib/libsched.so lib/libsched.so
-ln -sf ../../../libenkf/slib/libenkf.so lib/libenkf.so
-ln -sf ../../../libjob_queue/slib/libjob_queue.so lib/libjob_queue.so
-ln -sf ../../../libconfig/slib/libconfig.so lib/libconfig.so
-ln -sf ../../../libwell/slib/libwell.so lib/libwell.so
+ln -sf ../../../../build/libutil/src/libert_util.so lib/libert_util.so
+ln -sf ../../../../build/libgeometry/src/libgeometry.so lib/libgeometry.so
+ln -sf ../../../../build/libanalysis/lib/libanalysis.so lib/libanalysis.so
+ln -sf ../../../../build/libecl/src/libecl.so lib/libecl.so
+ln -sf ../../../../build/librms/src/librms.so lib/librms.so
+ln -sf ../../../../build/libsched/src/libsched.so lib/libsched.so
+ln -sf ../../../../build/libenkf/src/libenkf.so lib/libenkf.so
+ln -sf ../../../../build/libjob_queue/src/libjob_queue.so lib/libjob_queue.so
+ln -sf ../../../../build/libconfig/src/libconfig.so lib/libconfig.so
+ln -sf ../../../../build/libwell/src/libwell.so lib/libwell.so
 setenv LD_LIBRARY_PATH "$PWD/lib:$LD_LIBRARY_PATH"
 
 mkdir -p python

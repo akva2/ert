@@ -43,8 +43,7 @@ class GridTest( unittest.TestCase ):
 
 
     def testEGRID( self ):
-        #grid = ecl.EclGrid( egrid_file )
-        grid = ecl.EclGrid( "/tmp/ECLIPSE.EGRID" )
+        grid = ecl.EclGrid( egrid_file )
         self.assertTrue( grid )
 
 
