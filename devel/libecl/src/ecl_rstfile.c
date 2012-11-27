@@ -166,24 +166,23 @@ static time_t file_map_iget_restart_sim_date(const file_map_type * file_map , in
 }
 
 
-
-
 static int file_map_find_sim_time(const file_map_type * file_map , time_t sim_time) {
-  int global_index = -1;
+  int seqnum_index = -1;
   if ( file_map_has_kw( file_map , INTEHEAD_KW)) {
     const int_vector_type * intehead_index_list = hash_get( file_map->kw_index , INTEHEAD_KW );
     int index = 0;
     while (index < int_vector_size( intehead_index_list )) {
       const ecl_kw_type * intehead_kw = file_map_iget_kw( file_map , int_vector_iget( intehead_index_list , index ));
       if (ecl_intehead_date( intehead_kw ) == sim_time) {
-        global_index = int_vector_iget( intehead_index_list , index );
+        seqnum_index = index;
         break;
       }
       index++;
     }
   }
-  return global_index;
+  return seqnum_index;
 }
+
 
 
 /**
