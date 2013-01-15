@@ -152,8 +152,7 @@ void time_map_summary_update( time_map_type * map , const ecl_sum_type * ecl_sum
 
 void time_map_fwrite( time_map_type * map , FILE * stream ) {
   pthread_rwlock_rdlock( &map->rw_lock );
-  if (map->modified) 
-    time_t_vector_fwrite( map->map , stream );
+  time_t_vector_fwrite( map->map , stream );
   pthread_rwlock_unlock( &map->rw_lock );
 }
 
